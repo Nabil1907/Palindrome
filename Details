@@ -1,0 +1,24 @@
+    Considerations:
+        The algorithm preprocesses the input string by converting it to lowercase and removing spaces and punctuation.
+        This approach ensures that the algorithm is case-insensitive and ignores spaces and punctuation.
+        Special characters and spaces are removed to handle cases where only alphanumeric characters matter in the palindrome check.
+
+    Whiteboard Demonstration:
+        Explain the pseudocode step by step, emphasizing the importance of preprocessing to ensure a fair comparison.
+        Illustrate the steps using an example, showing how the string "A man, a plan, a canal, Panama!" becomes "amanaplanacanalpanama" after preprocessing.
+
+    Algorithm Complexity:
+        Time Complexity: O(n) - where n is the length of the input string.
+            Preprocessing takes O(n) time as each character needs to be examined.
+            Checking if the processed string is a palindrome also takes O(n) time.
+        Space Complexity: O(n) - additional space is used for the processed string.
+
+    Alternative Solutions:
+        Two-Pointer Approach:
+            Instead of creating a reversed string, use two pointers to compare characters from the beginning and end.
+            This reduces space complexity to O(1) but doesn't affect time complexity significantly.
+        Recursive Approach:
+            Divide the string into halves and compare corresponding characters recursively.
+            Similar time and space complexity, might be less intuitive for some.
+        Using Built-in Functions:
+            Depending on the programming language, there might be built-in functions (e.g., Python's str.lower() and str.isalnum()) that simplify the code but don't significantly change the complexity.
