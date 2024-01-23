@@ -1,0 +1,37 @@
+function isPalindrome(inputString):
+    // Step 1: Preprocess the string
+    processedString = preprocess(inputString)
+    
+    // Step 2: Check if the processed string is equal to its reverse
+    return processedString == reverse(processedString)
+
+function preprocess(inputString):
+    // Convert the string to lowercase
+    lowercaseString = toLowerCase(inputString)
+    
+    // Remove spaces and punctuation
+    cleanedString = removeSpacesAndPunctuation(lowercaseString)
+    
+    return cleanedString
+
+function reverse(inputString):
+    // Reverse the characters in the string
+    reversedString = ""
+    for each character in inputString:
+        reversedString = character + reversedString
+    
+    return reversedString
+
+function removeSpacesAndPunctuation(inputString):
+    // Remove spaces and punctuation from the string
+    cleanedString = ""
+    for each character in inputString:
+        if isAlphanumeric(character):
+            cleanedString = cleanedString + character
+    
+    return cleanedString
+
+function isAlphanumeric(character):
+    // Check if a character is alphanumeric
+    // (you may use a predefined function if available in your programming language)
+    return (character is a letter or a digit)
